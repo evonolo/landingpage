@@ -24,6 +24,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css">
+    <script>
+      window.addEventListener("load", function(){
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#edeff5",
+            "text": "#838391"
+          },
+          "button": {
+            "background": "#4b81e8"
+          }
+        },
+        "position": "bottom-left",
+        "content": {
+          "message": "Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten.",
+          "dismiss": "Verstanden",
+          "link": "Mehr erfahren",
+          "href": "https://example.com/datenschutz"
+        }
+      })});
+    </script>
+  
 <title>evonolo GmbH</title>
 <style>
 * {
