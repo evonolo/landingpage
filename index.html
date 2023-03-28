@@ -5,29 +5,10 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 
-  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css">
-    <script>
-      window.addEventListener("load", function(){
-      window.cookieconsent.initialise({
-        "palette": {
-          "popup": {
-            "background": "#ffffff",
-            "text": "#000000"
-          },
-          "button": {
-            "background": "#4189f6"
-          }
-        },
-        "position": "bottom-left",
-        "content": {
-          "message": "Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten.",
-          "dismiss": "Verstanden",
-          "link": "Mehr erfahren",
-          "href": "https://example.com/datenschutz"
-        }
-      })});
-    </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Hier wird das CookieConsent-Stylesheet von CDN eingebunden -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css" />
+	<!-- Hier können weitere Metadaten und Skripte eingefügt werden -->
   
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -96,5 +77,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </p>
 
 
+  
+	<!-- Hier wird der Cookie Consent Banner eingefügt -->
+	<div id="cookieConsent" style="background-color: #ffffff; color: #ffffff; font-size: 16px; padding: 10px; position: fixed; bottom: 0; left: 0; width: 100%; text-align: center; z-index: 9999;">
+	    <div style="display: inline-block; vertical-align: middle; margin-right: 10px;">Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website zu bieten.</div>
+	    <button style="background-color: #4189f6; color: #ffffff; font-size: 16px; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; display: inline-block; vertical-align: middle;" onclick="closeCookieConsent()">OK</button>
+	</div>
+
+	<!-- Hier wird das Skript eingefügt, das den Cookie Consent Banner schließt -->
+	<script>
+	function closeCookieConsent() {
+	    document.getElementById("cookieConsent").style.display = "none";
+	}
+	</script>
+
+	<!-- Hier werden die Skripte für das CookieConsent von CDN eingebunden -->
+	<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js"></script>
+	<script>
+	window.addEventListener("load", function(){
+	    window.cookieconsent.initialise({
+	        "palette": {
+	            "popup": {
+	                "background": "#ffffff",
+	                "text": "#ffffff"
+	            },
+	            "button": {
+	                "background": "#4189f6",
+	                "text": "#ffffff"
+	            }
+	        },
+	        "content": {
+	            "message": "Wir verwenden Cookies, um Ihnen das beste Erlebnis auf unserer Website zu bieten.",
+	            "dismiss": "OK"
+	        },
+	        "position": "bottom-left"
+	    })
+	});
+	</script>
+
+  
 </body>
 </html>
